@@ -16,6 +16,10 @@ public class UserRepository {
         users.add(new User("user-02", "Test User-02", "test2@user.com", "Test2@123"));
     }
 
+    public List<User> getAllUsers() {
+        return users;
+    }
+
     public User findByEmail(String email) {
         return users.stream().filter(user -> user.getEmail().equals(email)).findFirst().orElse(null);
     }

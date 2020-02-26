@@ -5,6 +5,7 @@ schema {
 
 type Query {
     allLinks: [Link]
+    allUsers: [User]
     link(id: ID): Link
     user(id: ID): User
 }
@@ -12,6 +13,8 @@ type Query {
 type Mutation {
     createLink(id: String!, url: String!, description: String!, userId: String!): Link
     createUser(id: String!, name: String!, email: String!, password: String!): User
+    updateLink(id: String!, url: String!, description: String!, userId: String!): Link
+    deleteLink(id: String!): Link
 }
 
 type Link {

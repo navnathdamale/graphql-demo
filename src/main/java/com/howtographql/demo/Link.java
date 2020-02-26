@@ -4,7 +4,7 @@ package com.howtographql.demo;
  * Data-class representing a link
  */
 public class Link {
-    
+
     private final String id;
     private final String url;
     private final String description;

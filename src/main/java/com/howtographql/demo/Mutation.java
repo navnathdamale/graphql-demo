@@ -21,8 +21,17 @@ public class Mutation implements GraphQLRootResolver {
         return newLink;
     }
 
+    public Link updateLink(String id, String url, String description, String userId) {
+        Link link = new Link(id, url, description, userId);
+        return linkRepository.updateLink(link);
+    }
+
     public User createUser(String id, String name, String email, String password) {
         User newUser = new User(id, name, email, password);
         return userRepository.saveUser(newUser);
+    }
+
+    public Link deleteLink(String id) {
+        return linkRepository.deleteLink(id);
     }
 }

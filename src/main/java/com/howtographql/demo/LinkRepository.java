@@ -32,4 +32,17 @@ public class LinkRepository {
     public void saveLink(Link link) {
         links.add(link);
     }
+
+    public Link updateLink(Link updated) {
+        Link link = findById(updated.getId());
+        links.remove(link);
+        links.add(updated);
+        return updated;
+    }
+
+    public Link deleteLink(String id) {
+        Link link = findById(id);
+        links.remove(link);
+        return link;
+    }
 }
