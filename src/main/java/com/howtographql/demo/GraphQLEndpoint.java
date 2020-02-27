@@ -2,6 +2,11 @@ package com.howtographql.demo;
 
 
 import com.coxautodev.graphql.tools.SchemaParser;
+import com.howtographql.repository.LinkRepository;
+import com.howtographql.repository.UserRepository;
+import com.howtographql.resolver.LinkResolver;
+import com.howtographql.resolver.Mutation;
+import com.howtographql.resolver.Query;
 import graphql.ExceptionWhileDataFetching;
 import graphql.GraphQLError;
 import graphql.schema.GraphQLSchema;
