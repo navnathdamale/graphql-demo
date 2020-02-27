@@ -1,2 +1,3 @@
 # graphql-demo
-To run the application use - *mvn jetty:run*
+To run the application: 
+*mvn jetty:run*
